@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html> <!--根元素，所有元素都必须是此元素的后代-->
+
+<head> <!--规定文档相关的配置信息(元数据),包括文档的标题，引用的文档样式和脚本等。
+    meta表示那些不能由其它 HTML 元相关(meta-related)元素-->
+    <meta charset="UTF-8">
+    <meta name="description" content="搜索栏下方文字"> <!--description -->
+    <meta name="keywords" content="Web,计算机,编程"> <!--keywords是搜索引擎搜索关键词后弹出-->
+    <link rel="icon" href="/1.1html基础标签/images/icon.png"><!--网页左边的logo-->
+    <title>我是标题</title> <!--定义文档的标题，显示在浏览器的标题栏或标签页上-->
+</head>
+
+
+
+
+
+<body> <!--body 元素表示文档的内容。-->
+    <h1>一级标题</h1>
+    <h2>二级标题</h2>
+    <h3>三级标题</h3>
+    <h4>四级标题</h4>
+    <h5>五级标题</h5>
+    <h6>六级标题</h6>
+    <h7>七级标题？</h7> <!--标题只有h1-h6六级标题，h7相当于正文-->
+
+    <div>块状</div> <!-- div中的内容是块状元素，div与div之间自带回车-->
+    <div>元素</div>
+
+    <span>行状</span><!--span中的内容是行状元素，span与span之间自带空格-->
+    <span>元素</span>
+
+    <p>p元素表示&nbsp; 文本&nbsp; 的一个段落。<!--&nbsp强制空格-->
+        在视觉媒体中，
+        段落通常表现为用空行和/或首行缩进与相邻段落分隔的文本块，
+        但 HTML 段落可以是相关内容的任何结构分组，如图像或表格字段。</p> <!--p标签会将空格回车过滤掉-->
+
+    <p>p元素表示文本的一个段落。<br> <!--br标签强制回车-->
+        在视觉媒体中， <br>
+        段落通常表现为用空行和/或首行缩进与相邻段落分隔的文本块，
+        但 HTML 段落可以是相关内容的任何结构分组，如图像或表格字段。</p>
+
+    <!--hr标签添加一根水平分割线-->
+
+    <pre>元素表示预定义格式文本。
+        在该元素中的文本通常按照原文件中的编排，
+        以等宽字体的形式展现出来，
+        文本中的空白符（比如空格和换行符）都会显示出来。
+    </pre>
+
+    <i>斜体标签</i>
+    <br>
+    <b>使得文本默认显示效果为加粗效果，是样式标签</b>
+    <br>
+    <strong>使得文本默认显示效果为加粗效果，是语义化标签</strong>
+    <br>
+    <del>删除线标签</del>
+    <br>
+    <ins>下划线标签</ins>
+    <br>
+    <mark>突出文本标签</mark>
+
+    <hr>
+    <h2>图片</h2>
+    <img src="/1.1 html基础标签/images/icon.png" alt="这个是一个可爱的小狗图像">
+    <!--src是图片地址，如果由于某种原因无法加载图像，普通浏览器也会在页面上显示alt 属性中的备用文本--><br>
+    <img width="300" height="300" src="/1.1 html基础标签/images/icon.png" alt=""> <!--可以设置图片的高度和宽度--> <br>
+    <img src="" alt="这个是一个可爱的小狗图像"> <!--图片失效案例-->
+
+    <hr>
+
+    <!--音频和视频-->
+
+    <h2>音频</h2>
+    <h3>第一种音频播放形式</h3>
+    <audio controls src="/1.1 html基础标签/audios/1173000869.mp3"></audio> <br>
+
+    <h3>第二种音频播放形式</h3>
+    <!--包含了多个 <source> 元素。如果能够播放的话，浏览器就会试图去加载第一个 source 元素；如果不行，那就退而求其次去加载第二个。-->
+    <audio controls>
+        <source src="/1.1 html基础标签/audios/no file.mp3" type="audio/mpeg" />
+        <source src="/1.1 html基础标签/audios/1173000869.mp3" type="audio/mpeg" />
+    </audio>
+
+    <hr>
+
+    <h2>视频</h2>
+    <h3>第一种视频播放形式</h3>
+    <video height="300" autoplay src="/1.1 html基础标签/videos/video1.mp4"></video>
+    <!--autoplay为自动播放，controls为互动式播放-->
+
+    <h3>第二种视频播放形式</h3>
+    <!--包含了多个 <source> 元素。如果能够播放的话，浏览器就会试图去加载第一个 source 元素；如果不行，那就退而求其次去加载第二个。-->
+    <video controls>
+        <source src="/1.1 html基础标签/videos/no file.mp4" type="audio/mpeg" />
+        <source src="/1.1 html基础标签/videos/video1.mp4" type="audio/mpeg" />
+    </video>
+
+    <hr>
+
+    <h2>超链接</h2>
+    <!--a标签为超链接标签，可以跳转至栈外,其中target="_blank"是打开新标签页并跳转-->
+    <a href="https://github.com/litershry?tab=repositories" target="_blank">站外跳转</a> <br>
+
+    <!--也可以跳转至栈内-->
+    <a href="/about.html">站内跳转</a>
+
+    <hr>
+
+    <h2>表单</h2>
+    <form action="/about.html"> <!--当点击按钮后，跳转到设置好的页面-->
+        <label for="666">用户名</label> <!--label标签中用id和文本框绑定-->
+        <input type="text" maxlength="10" name="username"
+            id="name"><!--创建基础的单行文本框，每个文本框name可以相同，id必须唯一,maxlength为最大长度-->
+        <br>
+        <label for="age">年 龄</label>
+        <input type="number" minlength="3" name="age" id="age"> <!--创建基础的数字文本框，文本框中只能输入数字,minlength为最小输入长度-->
+        <br>
+        <label for="email">邮 箱</label>
+        <input type="email" required="email" id="email"> <!--创建基础的邮箱文本框，文本框中必须含有@,required为必选项-->
+        <br>
+        <label for="password">密 码</label>
+        <input type="password" placeholder="密码" name="password" id="password">
+        <!--创建基础的密码文本框，文本框中输入的文字被隐藏，placeholder让文本框内存在相应汉字-->
+        <br>
+        <label for="c++">c++</label>
+        <input type="radio" name="lang" id="c++"> <!--radio标签通常用于一个单选组中，其中包含一组描述一系列相关选项的单选按钮。-->
+        <br>
+        <label for="java">java</label>
+        <input type="radio" name="lang2" id="java">
+        <br>
+        <label for="python">c++</label>
+        <input type="radio" name="lang" id="python"> <!--如果多组radio中name相同，那么这几个radio是互斥的，只能选其一-->
+        <br>
+        <input type="file" name=""> <!--导入一个文件-->
+        <br>
+
+        <label for="resume">拖动框</label>
+        <textarea rows="10" cols="20" name="resume" id="resume"></textarea> <!--textarea可拖动的文本框，可以设置其默认的行数和列数-->
+        <br>
+
+        <label for="duoxuan">选择</label>
+        <select name="lan" id="duoxuan"> <!--select在给定的选项中选择一个-->
+            <option value="">请选择</option><!--不填写内容即为空选项-->
+            <option value="c++">c++</option> <!--option提供选项-->
+            <option value="java">java</option>
+            <option value="python">python</option>
+            <option selected value="html">html</option> <!--selected为默认选项-->
+        </select><br>
+        <button type="submit">提交</button> <!--按钮标签，将一个form中输入的文本提交到后台-->
+    </form>
+
+
+    <hr>
+
+    <h2>列表</h2>
+    <h3>无序列表</h3>
+    <ul><!--<ul>元素（或称 HTML 无序列表元素）表示一个内可含多个元素的无序列表或项目符号列表。-->
+        <li>first item</li>
+        <li>second item</li>
+        <li>third item</li>
+    </ul>
+
+    <h3>有序列表</h3>
+    <ol> <!--<ol> 元素表示有序列表，通常渲染为一个带编号的列表。-->
+        <li>first item</li>
+        <li>second item</li>
+        <li>third item</li>
+    </ol>
+
+    <!--ol 和 ul 可以相互嵌套-->
+    <h3>列表嵌套</h3>
+    <ol>
+        <li>引言</li>
+        <li>背景</li>
+
+        <ul>
+            <li>Hbase</li>
+            <li>SpringBoot </li>
+            <ol>
+                <li>Java环境安装</li>
+                <li>vscode安装</li>
+            </ol>
+        </ul>
+    </ol>
+
+    <p>Cryptids of Cornwall:</p>
+
+    <dl> <!--文本描述-->
+        <dt>Beast of Bodmin</dt> <!--dt相当于标题，不缩进-->
+        <dd>A large feline inhabiting Bodmin Moor.</dd> <!--dd相当于内容，用来解释标题，缩进-->
+
+        <dt>Morgawr</dt>
+        <dd>A sea serpent.</dd>
+
+        <dt>Owlman</dt>
+        <dd>A giant owl-like creature.</dd>
+    </dl>
+</body>
+
+</html>
