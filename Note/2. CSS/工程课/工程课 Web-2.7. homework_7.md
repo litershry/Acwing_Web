@@ -1,0 +1,32 @@
+## 导航：[2. CSS](../../2. CSS.md)
+
+编写一个完整的HTML页面，标签内容为：
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>1</div>
+    <div>2</div>
+</body>
+
+</html>
+```
+
+## 要求
+
+1.   所有`div`标签满足：
+     -   宽度和高度均为`300px`；
+     -   内边距与外边距均为`10px`；
+     -   背景颜色为`lightblue`；
+     -   边框样式为`solid 10px gray`；
+2.   第一个`div`为内容盒子模型。
+3.   第二个`div`为边框盒子模型。
