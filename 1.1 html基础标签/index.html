@@ -103,18 +103,21 @@
 
     <h2>1.5 超链接</h2>
     <!--a标签为超链接标签，可以跳转至栈外,其中target="_blank"是打开新标签页并跳转-->
-    <a href="https://github.com/litershry?tab=repositories" target="_blank">站外跳转</a> <br>
+    <a href="https://github.com/litershry?tab=repositories" target="_blank">站外跳转</a>
+    <br>
 
     <!--也可以跳转至栈内-->
     <a href="/about.html">站内跳转</a>
-
+    <a href="https://github.com/litershry?tab=repositories">
+        <img border="0" width="600" src="/1.1 html基础标签/images/logo.png">
+    </a> <!--在一个<a>标签中加上一个<img>标签内容，即可让该<img>拥有一个超链接：-->
     <hr>
 
     <h2>1.6 表单</h2>
     <form action="/about.html"> <!--当点击按钮后，跳转到设置好的页面-->
-        <label for="666">用户名</label> <!--label标签中用id和文本框绑定-->
-        <input type="text" maxlength="10" name="username"
-            id="name"><!--创建基础的单行文本框，每个文本框name可以相同，id必须唯一,maxlength为最大长度-->
+        <label for="username">用户名</label> <!--label标签中用id和文本框绑定-->
+        <input type="text" maxlength="10" name="username" id="name">
+        <!--创建基础的单行文本框，每个文本框name可以相同，id必须唯一,maxlength为最大长度-->
         <br>
         <label for="age">年 龄</label>
         <input type="number" minlength="3" name="age" id="age"> <!--创建基础的数字文本框，文本框中只能输入数字,minlength为最小输入长度-->
